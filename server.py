@@ -2,6 +2,7 @@
 
 import json
 import signal
+import sys
 from socket import error
 
 import time
@@ -129,7 +130,7 @@ class MessageForwarder(WebSocketHandler):
 def handle_shutdown(*arg, **kwargs):
     IOLoop.instance().stop()
 
-def main():
+def main(hostIp = "localhost"):
     backend = RosBackend.get_instance(shutdown_hook=handle_shutdown)
 
     signal.signal(signal.SIGINT, handle_shutdown)
@@ -147,7 +148,7 @@ def main():
     template_path="templates")
 
 #    address, port = "localhost", 8888
-    address, port = "192.168.43.142", 8888
+    address, port = hostIp, 8888
     print "Application instantiated"
 
     connected = False
@@ -165,4 +166,5 @@ def main():
     IOLoop.instance().start()
 
 if __name__ == "__main__":
-    main()
+    hostIp = sys.argv[1]
+    main(hostIp)
