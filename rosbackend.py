@@ -63,6 +63,10 @@ class RosBackend(BackendBase):
     def btn_pushed(self, command_text):
         self.btn_pub.publish(command_text)
 
+    def updateRosParams(self):
+        self._title = rospy.get_param("story/title", "Not found")
+        self._storyline = rospy.get_param("story/storyline", ["None"])
+
 
     def ros_image_to_base64(self, rosmsg):
         if hasattr(rosmsg, 'encoding'):

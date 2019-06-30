@@ -21,6 +21,9 @@ class ChallengeHandler(RequestHandler):
         self.backend = backend
 
     def get(self):
+	print "Update ROS Params"
+	self.backend.updateRosParams()
+
         print "Rendering..."
         self.render("challenge.html",
                     visualization="Robot camera image",
@@ -126,7 +129,7 @@ class MessageForwarder(WebSocketHandler):
 def handle_shutdown(*arg, **kwargs):
     IOLoop.instance().stop()
 
-if __name__ == "__main__":
+def main():
     backend = RosBackend.get_instance(shutdown_hook=handle_shutdown)
 
     signal.signal(signal.SIGINT, handle_shutdown)
@@ -143,7 +146,8 @@ if __name__ == "__main__":
     debug=True,
     template_path="templates")
 
-    address, port = "localhost", 8888
+#    address, port = "localhost", 8888
+    address, port = "192.168.43.142", 8888
     print "Application instantiated"
 
     connected = False
@@ -159,3 +163,6 @@ if __name__ == "__main__":
 
     print "Starting IOLoop"
     IOLoop.instance().start()
+
+if __name__ == "__main__":
+    main()
