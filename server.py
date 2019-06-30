@@ -166,5 +166,9 @@ def main(hostIp = "localhost"):
     IOLoop.instance().start()
 
 if __name__ == "__main__":
-    hostIp = sys.argv[1]
-    main(hostIp)
+    try:
+        hostIp = sys.argv[1]
+        main(hostIp)
+    except IndexError:
+        print("Please specifiy the host ip of the vizbox Server as the first argument")
+
