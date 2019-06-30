@@ -1,26 +1,68 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="static/stylesheets/style.css">
-        <script src="static/scripts/jquery-3.3.1.min.js"></script>
-        <link rel="stylesheet" href="static/stylesheets/bootstrap.min.css">
-        <script src="static/scripts/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../static/stylesheets/style.css">
+        <script src="../static/scripts/jquery-3.3.1.min.js"></script>
+        <link rel="../stylesheet" href="static/stylesheets/bootstrap.min.css">
+        <script src="../static/scripts/bootstrap.min.js"></script>
         
-        <link rel="shortcut icon" href="static/favicon.ico">    
+        <link rel="shortcut icon" href="../static/favicon.ico">
 
     </head>
+
+
+    <style>
+        .responsive {
+          width: 100%;
+          height: auto;
+        }
+        .grid-container {
+          display: grid;
+          grid-template-columns: auto auto;
+          padding: 5px;
+        }
+        .logo{
+            width: 100%;
+            height: auto;
+            #padding: 5px;
+        }
+    </style>
+
     <body class="main">
         
         <div class="header">
+            <img id="visualization_img2" src=../static/RT_Lions_Logo.png class="logo">
             <h1 id="title">{{title}}</h1>
             <hr style="border-color: white;">
         </div>
 
         <div class="content center">
-            {{visualization}}
-            <br>
-            <img    id="visualization_img"
-                    src="https://www.w3schools.com/html/html5.gif">
+            <div class="grid-container">
+              <div class="grid-item">
+                  <img    id="visualization_img2" src="http://i.imgur.com/aEI7JCS.png" class="responsive">
+              </div>
+
+              <div class="grid-item">
+                  <img    id="visualization_img2" src="https://www.researchgate.net/profile/Jeremy_Stolarz/publication/228618824/figure/fig4/AS:301900764336158@1448990159513/RoboCupHome-arena-kitchen-view-1.png" class="responsive">
+              </div>
+              <div class="grid-item">
+                  <img    id="visualization_img2" src="http://www.brekel.com/wp-content/uploads/2013/05/kinect2_depth.jpg" class="responsive">
+              </div>
+              <div class="grid-item">
+                  <img    id="visualization_img2" src="http://i.imgur.com/aEI7JCS.png" class="responsive">
+              </div>
+            </div>
+
+                <!--
+                <div class="col-sm-6">.col-sm-6
+                    <img    id="visualization_img2" src="http://i.imgur.com/aEI7JCS.png" class="responsive">
+                </div>
+                <div class="col-sm-6">.col-sm-6
+                     <img    id="visualization_img2" src="http://i.imgur.com/aEI7JCS.png" class="responsive">
+                </div>
+                -->
+
+
         </div>
 
         <div class="sidebar">

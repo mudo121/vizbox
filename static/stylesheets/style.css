@@ -15,7 +15,7 @@ body {
 
 .content {
 
-    width:70%;
+    width:68%;
     height:80%;
     right:0;
     position:absolute;
@@ -29,7 +29,7 @@ body {
   	height:20%;
   	position:absolute;
   	left:0;
-  	background-color:  #30426A;
+  	background-color:  #2F75B8;
   	color: #E9EDEE;
   	text-align: center;
 }
@@ -40,7 +40,7 @@ body {
 	bottom:0;
 	right:0;
 	position:absolute;
-	background-color:  #30426A;
+	background-color:  #2F75B8;
 	color: #E9EDEE;
 }
 
@@ -63,7 +63,7 @@ body {
 	bottom: 0;
 	position: absolute;
 	margin-left: 20%;
-	background-color:  #30426A;
+	background-color:  #2F75B8;
 	color: #E9EDEE;
     overflow-y: auto;
 
@@ -75,7 +75,7 @@ body {
 	float:left;
 	bottom:0;
 	position: absolute;
-	background-color:  #30426A;
+	background-color:  #2F75B8;
 	color: #E9EDEE;
 }
 
