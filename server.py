@@ -26,7 +26,7 @@ class ChallengeHandler(RequestHandler):
 	self.backend.updateRosParams()
 
         print "Rendering..."
-        self.render("challenge.html",
+        self.render("templates/challenge.html",
                     visualization="Robot camera image",
                     title=self.backend.title,
                     storyline=self.backend.storyline

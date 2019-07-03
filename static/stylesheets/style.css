@@ -19,7 +19,7 @@ body {
     height:80%;
     right:0;
     position:absolute;
-    color: black;
+    color: #2F75B8;
     padding: 10px;
 }
 
@@ -29,7 +29,7 @@ body {
   	position:absolute;
   	left:0;
   	background-color:  white;
-  	color: black;
+  	color: #2F75B8;
   	text-align: center;
 }
 
@@ -40,7 +40,7 @@ body {
 	right:0;
 	position:absolute;
 	background-color:  white;
-	color: black;
+	color: #2F75B8;
 }
 
 #btn1 {
@@ -63,7 +63,7 @@ body {
 	position: absolute;
 	margin-left: 20%;
 	background-color:  white;
-	color: black;
+	color: #2F75B8;
     overflow-y: auto;
 
 }
@@ -80,16 +80,19 @@ body {
 
 .subtitle-line {
   margin: 10px;
+	font-size: 13pt;
 }
 
 li.operator_text {
     list-style-type: circle;
     font-style: oblique;
+
 }
 
 li.robot_text {
     list-style-type: square;
     font-family: courier;
+	font-weight: bold;
 }
 
 li.activated {

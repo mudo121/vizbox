@@ -1,104 +1,100 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="stylesheet" href="../static/stylesheets/style.css">
-        <script src="../static/scripts/jquery-3.3.1.min.js"></script>
-        <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
-        <script src="../static/scripts/bootstrap.min.js"></script>
-        
-        <link rel="shortcut icon" href="../static/favicon.ico">
+<head>
+    <link rel="stylesheet" href="../static/stylesheets/style.css">
+    <script src="../static/scripts/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../static/stylesheets/bootstrap.min.css">
+    <script src="../static/scripts/bootstrap.min.js"></script>
 
-    </head>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
 
 
-    <style>
-        .responsive {
-          width: 100%;
-          height: auto;
-        }
-        .grid-container {
-          display: grid;
-          grid-template-columns: auto auto;
-          padding: 5px;
-        }
-        .logo{
-            width: 100%;
-            height: auto;
-            #padding: 5px;
-        }
-    </style>
+<style>
+    .responsive {
+        width: 100%;
+        height: auto;
+    }
 
-    <body class="main">
-        
-        <div class="header">
-            <img id="visualization_img2" src=../static/RT_Lions_Logo.png class="logo">
-            <h1 id="title">{{title}}</h1>
-            <hr style="border-color: white;">
-        </div>
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 5px;
+    }
 
-        <div class="content center">
-            <div class="grid-container">
-              <div class="grid-item">
-                  <img    id="visualization_img_1"  class="responsive">
-              </div>
+    .logo {
+        width: 100%;
+        height: auto;
+        #padding: 5px;
+    }
+</style>
 
-              <div class="grid-item">
-                  <img    id="visualization_img_2"  class="responsive">
-              </div>
-              <div class="grid-item">
-                  <img    id="visualization_img_3"  class="responsive">
-              </div>
-              <div class="grid-item">
-                  <img    id="visualization_img_4"  class="responsive">
-              </div>
-            </div>
+<body class="main">
 
-            <!--
-            Placeholder Pictures
-            <div class="grid-container">
-              <div class="grid-item">
-                  <img    id="visualization_img2" src="http://i.imgur.com/aEI7JCS.png" class="responsive">
-              </div>
+<div class="header">
+    <img id="visualization_img2" src=../static/RT_Lions_Logo.png class="logo">
+    <br>
+    <br>
+    <br>
+    <h1 id="title">{{ title }}</h1>
+    <hr style="border-color: white;">
+</div>
 
-              <div class="grid-item">
-                  <img    id="visualization_img2" src="https://www.researchgate.net/profile/Jeremy_Stolarz/publication/228618824/figure/fig4/AS:301900764336158@1448990159513/RoboCupHome-arena-kitchen-view-1.png" class="responsive">
-              </div>
-              <div class="grid-item">
-                  <img    id="visualization_img2" src="http://www.brekel.com/wp-content/uploads/2013/05/kinect2_depth.jpg" class="responsive">
-              </div>
-              <div class="grid-item">
-                  <img    id="visualization_img2" src="http://i.imgur.com/aEI7JCS.png" class="responsive">
-              </div>
-            </div>
-            -->
-        </div>
+<div class="content center">
 
-        <div class="sidebar">
-            <h2 align="center">Event</h2>
-            <ol id="storyline">
-                  {% for line in storyline %}
-                    {% block line %}
-                      <li>{{line}}</li>
-                    {% end %}
-                  {% end %}
-            </ol>
-        </div>
 
-        <div class="footer-button center">
-    			<div  class="btn-group-vertical" style="width:75%;">
-    			    <button type="button" id="btn1" class="btn btn-primary ">Next Step</button>
-    			    <button type="button" id="btn2" class="btn btn-danger ">Stop</button>
-      			</div>
-    		</div>
+    {{ visualization }}
+    <br>
+    <img id="visualization_img" src="https://www.w3schools.com/html/html5.gif" class="responsive">
 
-    		<div class="footer-text">
-    			<ul id="subtitles">
-                        <!-- Dummies to test style -->
-                    <!-- <li class="robot_text subtitle-line">Robot : Ok, I will follow you</li>
-                    <li class="operator_text subtitle-line">Operator : Follow me</li> -->
-                   
-                </ul>
-    		</div>
-        <script src="static/scripts/script.js"></script>
-    </body>
+
+    <!--
+    Placeholder Pictures
+    <div class="grid-container">
+      <div class="grid-item">
+          <img    id="visualization_img2" src="http://i.imgur.com/aEI7JCS.png" class="responsive">
+      </div>
+
+      <div class="grid-item">
+          <img    id="visualization_img2" src="https://www.researchgate.net/profile/Jeremy_Stolarz/publication/228618824/figure/fig4/AS:301900764336158@1448990159513/RoboCupHome-arena-kitchen-view-1.png" class="responsive">
+      </div>
+      <div class="grid-item">
+          <img    id="visualization_img2" src="http://www.brekel.com/wp-content/uploads/2013/05/kinect2_depth.jpg" class="responsive">
+      </div>
+      <div class="grid-item">
+          <img    id="visualization_img2" src="http://i.imgur.com/aEI7JCS.png" class="responsive">
+      </div>
+    </div>
+    -->
+</div>
+
+<div class="sidebar">
+
+    <ol id="storyline">
+        {% for line in storyline %}
+        {% block line %}
+        <li>{{ line }}</li>
+        {% end %}
+        {% end %}
+    </ol>
+</div>
+
+<div class="footer-button center">
+    <div class="btn-group-vertical" style="width:75%;">
+        <button type="button" id="btn1" class="btn btn-primary ">Next Step</button>
+        <button type="button" id="btn2" class="btn btn-danger ">Stop</button>
+    </div>
+</div>
+
+<div class="footer-text">
+    <ul id="subtitles">
+
+        <li class="robot_text subtitle-line">Robot : Ok, I will follow you</li>
+        <li class="operator_text subtitle-line">Operator : Follow me</li>
+
+    </ul>
+</div>
+<script src="static/scripts/script.js"></script>
+</body>
 </html>

@@ -42,10 +42,7 @@ class RosBackend(BackendBase):
         self.robot_sub = rospy.Subscriber("robot_text", String, call_callbacks_in(self.on_robot_text, lambda rosmsg: rosmsg.data), queue_size=100)
         self.step_sub = rospy.Subscriber("challenge_step", UInt32, call_callbacks_in(self.on_challenge_step, lambda rosmsg: rosmsg.data), queue_size=100)
 
-        self.image_sub = rospy.Subscriber("image_1", Image, call_callbacks_in(self.on_image, self.ros_image_to_base64), queue_size=1)
-        self.image_sub = rospy.Subscriber("image_2", Image, call_callbacks_in(self.on_image, self.ros_image_to_base64), queue_size=1)
-        self.image_sub = rospy.Subscriber("image_3", Image, call_callbacks_in(self.on_image, self.ros_image_to_base64), queue_size=1)
-        self.image_sub = rospy.Subscriber("image_4", Image, call_callbacks_in(self.on_image, self.ros_image_to_base64), queue_size=1)
+        self.image_sub = rospy.Subscriber("image", Image, call_callbacks_in(self.on_image, self.ros_image_to_base64), queue_size=1)
         self.compressed_image_sub = rospy.Subscriber("image/compressed", CompressedImage, call_callbacks_in(self.on_image, self.ros_image_to_base64), queue_size=1)
 
         try:
@@ -65,10 +62,6 @@ class RosBackend(BackendBase):
 
     def btn_pushed(self, command_text):
         self.btn_pub.publish(command_text)
-
-    def updateRosParams(self):
-        self._title = rospy.get_param("story/title", "Not found")
-        self._storyline = rospy.get_param("story/storyline", ["None"])
 
 
     def ros_image_to_base64(self, rosmsg):
