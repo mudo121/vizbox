@@ -15,11 +15,12 @@ body {
 
 .content {
 
-    width:68%;
+    width:70%;
     height:80%;
     right:0;
     position:absolute;
-    color: black;
+
+    color: #E9EDEE;
     padding: 10px;
 }
 
@@ -28,8 +29,8 @@ body {
   	height:20%;
   	position:absolute;
   	left:0;
-  	background-color:  white;
-  	color: black;
+  	background-color:  #30426A;
+  	color: #E9EDEE;
   	text-align: center;
 }
 
@@ -39,8 +40,8 @@ body {
 	bottom:0;
 	right:0;
 	position:absolute;
-	background-color:  white;
-	color: black;
+	background-color:  #30426A;
+	color: #E9EDEE;
 }
 
 #btn1 {
@@ -62,8 +63,8 @@ body {
 	bottom: 0;
 	position: absolute;
 	margin-left: 20%;
-	background-color:  white;
-	color: black;
+	background-color:  #30426A;
+	color: #E9EDEE;
     overflow-y: auto;
 
 }
@@ -74,8 +75,8 @@ body {
 	float:left;
 	bottom:0;
 	position: absolute;
-	background-color:  white;
-	color: #2F75B8;
+	background-color:  #30426A;
+	color: #E9EDEE;
 }
 
 .subtitle-line {

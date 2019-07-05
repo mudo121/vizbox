@@ -1,4 +1,4 @@
-var ws = new WebSocket("ws://localhost:8888/ws");
+var ws = new WebSocket("ws://192.168.43.142:8888/ws");
 
 ws.onmessage = function (evt) {
     var json = JSON.parse(evt.data);
