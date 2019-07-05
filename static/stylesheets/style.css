@@ -19,8 +19,7 @@ body {
     height:80%;
     right:0;
     position:absolute;
-
-    color: #E9EDEE;
+    color: #2F75B8;
     padding: 10px;
 }
 
@@ -29,8 +28,8 @@ body {
   	height:20%;
   	position:absolute;
   	left:0;
-  	background-color:  #30426A;
-  	color: #E9EDEE;
+  	background-color:  white;
+  	color: #2F75B8;
   	text-align: center;
 }
 
@@ -40,8 +39,8 @@ body {
 	bottom:0;
 	right:0;
 	position:absolute;
-	background-color:  #30426A;
-	color: #E9EDEE;
+	background-color:  white;
+	color: #2F75B8;
 }
 
 #btn1 {
@@ -63,8 +62,8 @@ body {
 	bottom: 0;
 	position: absolute;
 	margin-left: 20%;
-	background-color:  #30426A;
-	color: #E9EDEE;
+	background-color:  white;
+	color: #2F75B8;
     overflow-y: auto;
 
 }
@@ -81,16 +80,19 @@ body {
 
 .subtitle-line {
   margin: 10px;
+	font-size: 13pt;
 }
 
 li.operator_text {
     list-style-type: circle;
     font-style: oblique;
+
 }
 
 li.robot_text {
     list-style-type: square;
     font-family: courier;
+	font-weight: bold;
 }
 
 li.activated {
